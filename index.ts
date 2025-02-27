@@ -13,10 +13,10 @@ function getScreenRecords(): string {
     return JSON.stringify(events);
 }
 
-export function createCrwebPlugin(): Plugin {
+export function createRrwebPlugin(): Plugin {
     let resolved: ResolvedConfig;
     return {
-        name: 'plugin-falcon-rrweb',
+        name: 'rrweb-plugin',
         configResolved(config) {
             resolved = config;
             if (config.extra && config.extra['screenRecord']) {
